@@ -1,30 +1,40 @@
 <script>
+import { ref, onMounted } from 'vue'
 export default {
-  name: "DigitalClock",
-  data() {
-    return {
-      hours: 0,
-      minutes: 0,
-      seconds: 0
-    }
-  },
-  mounted() {
-    setInterval(() => this.setTime(), 1000)
-  },
-  methods: {
-    setTime() {
+  name: 'DigitalClock',
+  setup(){
+    let hours = ref(0);
+    let minutes = ref(0);
+    let seconds = ref(0);
+    const setTime=()=> {
       const date = new Date();
-      let hours = date.getHours();
-      let minutes = date.getMinutes();
-      let seconds = date.getSeconds();
-      hours = hours <= 9 ? `${hours}`.padStart(2, 0) : hours;
-      minutes = minutes <= 9 ? `${minutes}`.padStart(2, 0) : minutes;
-      seconds = seconds <= 9 ? `${seconds}`.padStart(2, 0) : seconds;
-      this.hours = hours;
-      this.minutes = minutes;
-      this.seconds = seconds;
+      let h = date.getHours();
+      let m = date.getMinutes();
+      let s = date.getSeconds();
+      h = h <= 9 ? `${h}`.padStart(2, 0) : h;
+      m = minutes <= 9 ? `${m}`.padStart(2, 0) : m;
+      s = s <= 9 ? `${s}`.padStart(2, 0) : s;
+      hours.value = h;
+      minutes.value = m;
+      seconds.value = s;
     }
+
+    const showLocalTime = function(){
+        setInterval(() => setTime(), 1000)
+    };
+
+    onMounted(() => {
+      showLocalTime()
+    })
+
+    return{
+      hours,
+      minutes,
+      seconds
+    }
+
   }
+
 }
 </script>
 
