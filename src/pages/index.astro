@@ -1,0 +1,16 @@
+---
+import Food from "../components/food.vue";
+import Navigation from "../components/navigation.vue";
+import Layout from "../layouts/Layout.astro"
+
+const title = "Hello World!";
+---
+<Layout title={title}>
+    <header>
+      <Navigation />
+    </header>
+    <main>
+      <h1>Food I like:</h1>
+      <Food />
+    </main>
+</Layout>
