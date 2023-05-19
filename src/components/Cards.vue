@@ -3,14 +3,16 @@ import { ref } from 'vue'
 export default {
   name: 'Cards',
   setup(){
-    const max = 4;
+    const max = 8;
     let card = ref(0);
-    card.value = Math.floor(Math.random() * max) + 1;
-		const shuffle = () => (card.value = Math.floor(Math.random() * max) + 1);
+    card.value = Math.floor(Math.random() * max);
+		const shuffle = () => (card.value = Math.floor(Math.random() * max));
 
+    const emoji = ["😀", "😘", "😢", "🤮","😬","😍","🤔","😈"];
     return{
       card,
-      shuffle
+      shuffle,
+      emoji
     }
 
   }
@@ -21,7 +23,7 @@ export default {
 <template>
   <div class="container">
     <div class="LCD">
-      <div>{{ card }}</div>
+      <div>{{ emoji[card] }}</div>
       <div><button @click="shuffle()">shuffle</button></div>
     </div>
   </div>
