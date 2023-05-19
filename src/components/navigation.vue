@@ -8,6 +8,9 @@
         <li>
           <a href="/about">About</a>
         </li>
+        <li>
+          <a href="/timezone">Time zone</a>
+        </li>
       </ul>
     </nav>
   </div>

@@ -1,0 +1,16 @@
+---
+import Timer from "../components/Timer.vue";
+import Navigation from "../components/navigation.vue";
+import Layout from "../layouts/Layout.astro"
+
+const title = "timezone";
+---
+<Layout title={title}>
+    <header>
+      <Navigation />
+    </header>
+    <main>
+      <h1>Time Zone</h1>
+      <Timer client:only="vue" />
+    </main>
+</Layout>
