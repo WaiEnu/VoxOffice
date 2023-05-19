@@ -11,6 +11,9 @@
         <li>
           <a href="/timezone">Time zone</a>
         </li>
+        <li>
+          <a href="/gallary">Today's Mood</a>
+        </li>
       </ul>
     </nav>
   </div>

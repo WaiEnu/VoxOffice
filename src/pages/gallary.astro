@@ -1,0 +1,16 @@
+---
+import Cards from "../components/Cards.vue";
+import Navigation from "../components/navigation.vue";
+import Layout from "../layouts/Layout.astro"
+
+const title = "cards";
+---
+<Layout title={title}>
+    <header>
+      <Navigation />
+    </header>
+    <main>
+      <h1>Today's Mood</h1>
+      <Cards client:only="vue" />
+    </main>
+</Layout>
