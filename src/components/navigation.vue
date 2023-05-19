@@ -3,16 +3,16 @@
     <nav>
       <ul class="menu">
         <li>
-          <a href="/">Home</a>
+          <a href="/VoxOffice/">Home</a>
         </li>
         <li>
-          <a href="/about">About</a>
+          <a href="/VoxOffice/about">About</a>
         </li>
         <li>
-          <a href="/timezone">Time zone</a>
+          <a href="/VoxOffice/timezone">Time zone</a>
         </li>
         <li>
-          <a href="/gallary">Today's Mood</a>
+          <a href="/VoxOffice/gallary">Today's Mood</a>
         </li>
       </ul>
     </nav>
