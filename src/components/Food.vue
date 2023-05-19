@@ -1,11 +1,11 @@
 <template>
-  <li>
+  <div>
     <ul>
       <li v-for="item in food" v-bind:key=item>
         {{ item }}
       </li>
     </ul>
-  </li>
+  </div>
 </template>
 
 <script setup lang="ts">
